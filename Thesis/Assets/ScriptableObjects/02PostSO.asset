@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b887aca837f47c4d8eadd8a0c7572e9, type: 3}
   m_Name: 02PostSO
   m_EditorClassIdentifier: 
-  postImage: {fileID: 0}
-  accountImage: {fileID: 0}
+  postImage: {fileID: 21300000, guid: 2b2432eccbff8c549b76e27b60d17551, type: 3}
+  accountImage: {fileID: 21300000, guid: 1c68f5728468b7a47a94cddb32d22808, type: 3}
   communityNote:
   - 1
   - 2
