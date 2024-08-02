@@ -8,6 +8,8 @@ public class TimerBar : MonoBehaviour
 
     public Slider slider;
 
+    private Coroutine countdownCOroutine;
+
     public void SetMaxTime(int time)
     {
         slider.maxValue = time;
