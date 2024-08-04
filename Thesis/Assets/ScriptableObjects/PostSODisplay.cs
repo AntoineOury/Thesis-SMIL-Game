@@ -15,7 +15,7 @@ public class PostSODisplay : MonoBehaviour
     public Image postImage;
     public Image accImage;
 
-    public TMP_Text communNote;
+    // public TMP_Text communNote;
 
 
     public Button scrollOn;
@@ -40,9 +40,9 @@ public class PostSODisplay : MonoBehaviour
     
     private void DisplayPost(PostScriptableObject postSO){
 
-    postImage.sprite = postSO.postImage;
+        postImage.sprite = postSO.postImage;
         accImage.sprite = postSO.accountImage;
 
-        communNote.text = postSO.communityNote.ToString();
+        // communNote.text = postSO.communityNote.ToString();
     }
 }

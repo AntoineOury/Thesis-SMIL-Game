@@ -10,5 +10,5 @@ public class PostScriptableObject : ScriptableObject
     public Sprite postImage;
     public Sprite accountImage;
 
-    public string[] communityNote;
+    // public string[] communityNote;
 }

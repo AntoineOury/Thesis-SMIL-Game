@@ -11,24 +11,46 @@ public class TimerBar : MonoBehaviour
     
     //how long is the time set to
     public float sliderTimer;
-
+    
     public bool stopTimer = false;
 
     public void Start()
     {
         timerSlider.maxValue = sliderTimer;
+        timerSlider.value = sliderTimer;
+
+        //starts timer when the game starts
+        //can be added anywhere in the code, when other logic is added
+        StartTimer();
     }
 
-    // private Coroutine countdownCOroutine;
 
-    // public void SetMaxTime(int time)
-    // {
-    //     timerSlider.maxValue = time;
-    //     timerSlider.value = time;
-    // }
-    //
-    // public void SetTime(int time)
-    // {
-    //     timerSlider.value = time;
-    // }
+    public void StartTimer()
+    {
+        StartCoroutine(StartTheTimer());
+    }
+
+    IEnumerator StartTheTimer()
+    {
+        while (stopTimer == false)
+        {
+            sliderTimer -= Time.deltaTime;
+            yield return new WaitForSeconds(0.001f);
+
+            if (sliderTimer <= 0)
+            {
+                stopTimer = true;
+            }
+
+            if (stopTimer == false)
+            {
+                timerSlider.value = sliderTimer;
+            }
+        }
+    }
+    
+    public void StopTimer()
+    {
+        stopTimer = true;
+    }
 }
