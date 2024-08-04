@@ -14,7 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postImage: {fileID: 21300000, guid: 73a074a3d90d29546948c1b380760795, type: 3}
   accountImage: {fileID: 21300000, guid: 1c68f5728468b7a47a94cddb32d22808, type: 3}
-  communityNote:
-  - 1
-  - 2
-  - 3
+  communityNote: 1234
