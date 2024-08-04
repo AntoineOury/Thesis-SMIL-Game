@@ -1,56 +1,72 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TimerBar : MonoBehaviour
 {
-
+    
+    //code written with help from this tutorial: https://www.youtube.com/watch?v=-dKkAzCrBOY
+    //and chatGPT
     public Slider timerSlider;
-    
-    //how long is the time set to
     public float sliderTimer;
-    
-    public bool stopTimer = false;
 
-    public void Start()
+    private float initialSliderTimer;
+    private bool stopTimer = false;
+    private Coroutine timerCoroutine;
+
+    void Start()
     {
+        initialSliderTimer = sliderTimer;
         timerSlider.maxValue = sliderTimer;
         timerSlider.value = sliderTimer;
 
-        //starts timer when the game starts
-        //can be added anywhere in the code, when other logic is added
+        // Start the timer when the game starts
         StartTimer();
     }
 
-
     public void StartTimer()
     {
-        StartCoroutine(StartTheTimer());
+        if (timerCoroutine != null)
+        {
+            StopCoroutine(timerCoroutine);
+        }
+        stopTimer = false;
+        timerCoroutine = StartCoroutine(StartTheTimer());
     }
 
     IEnumerator StartTheTimer()
     {
-        while (stopTimer == false)
+        while (!stopTimer)
         {
             sliderTimer -= Time.deltaTime;
-            yield return new WaitForSeconds(0.001f);
+            yield return null; // More efficient than WaitForSeconds(0.001f)
 
             if (sliderTimer <= 0)
             {
                 stopTimer = true;
+                sliderTimer = 0;
             }
 
-            if (stopTimer == false)
+            if (!stopTimer)
             {
                 timerSlider.value = sliderTimer;
             }
         }
     }
-    
+
+    public void RestartTimer()
+    {
+        sliderTimer = initialSliderTimer;
+        timerSlider.value = sliderTimer;
+        StartTimer();
+    }
+
     public void StopTimer()
     {
         stopTimer = true;
+        if (timerCoroutine != null)
+        {
+            StopCoroutine(timerCoroutine);
+        }
     }
 }
