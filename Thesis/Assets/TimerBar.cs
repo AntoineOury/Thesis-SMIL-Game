@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,18 +7,28 @@ using UnityEngine.UI;
 public class TimerBar : MonoBehaviour
 {
 
-    public Slider slider;
-
-    private Coroutine countdownCOroutine;
-
-    public void SetMaxTime(int time)
-    {
-        slider.maxValue = time;
-        slider.value = time;
-    }
+    public Slider timerSlider;
     
-    public void SetTime(int time)
+    //how long is the time set to
+    public float sliderTimer;
+
+    public bool stopTimer = false;
+
+    public void Start()
     {
-        slider.value = time;
+        timerSlider.maxValue = sliderTimer;
     }
+
+    // private Coroutine countdownCOroutine;
+
+    // public void SetMaxTime(int time)
+    // {
+    //     timerSlider.maxValue = time;
+    //     timerSlider.value = time;
+    // }
+    //
+    // public void SetTime(int time)
+    // {
+    //     timerSlider.value = time;
+    // }
 }
