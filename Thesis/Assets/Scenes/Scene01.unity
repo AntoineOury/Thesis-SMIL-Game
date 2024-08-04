@@ -1342,6 +1342,7 @@ MonoBehaviour:
   postImage: {fileID: 1092772480}
   accImage: {fileID: 799710807}
   scrollOn: {fileID: 1363601693}
+  timerBarSc: {fileID: 1898716375}
 --- !u!1 &1016097600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,7 +2694,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1898716376}
-  sliderTimer: 60
+  sliderTimer: 5
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1898716376
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,8 +19,10 @@ public class PostSODisplay : MonoBehaviour
 
 
     public Button scrollOn;
-
+    
     private int currentIndex = 0;
+    
+    public TimerBar timerBarSc; //ref to the TimerBar Script
 
     void Start()
     {
@@ -30,12 +32,16 @@ public class PostSODisplay : MonoBehaviour
         }
 
         scrollOn.onClick.AddListener(CycleThroughPosts);
+        
+        //timer ending listener
+        timerBarSc.onTimerEnd.AddListener(CycleThroughPosts);
     }
 
     private void CycleThroughPosts()
     {
         currentIndex = (currentIndex + 1) % postSO.Length;
         DisplayPost(postSO[currentIndex]);
+        timerBarSc.RestartTimer(); //restart the timer coroutine
     }
     
     private void DisplayPost(PostScriptableObject postSO){

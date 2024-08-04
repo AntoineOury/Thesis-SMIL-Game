@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class TimerBar : MonoBehaviour
@@ -13,6 +14,8 @@ public class TimerBar : MonoBehaviour
     private float initialSliderTimer;
     private bool stopTimer = false;
     private Coroutine timerCoroutine;
+
+    public UnityEvent onTimerEnd;
 
     void Start()
     {
@@ -39,12 +42,14 @@ public class TimerBar : MonoBehaviour
         while (!stopTimer)
         {
             sliderTimer -= Time.deltaTime;
-            yield return null; // More efficient than WaitForSeconds(0.001f)
+            yield return null;
 
             if (sliderTimer <= 0)
             {
                 stopTimer = true;
                 sliderTimer = 0;
+                
+                onTimerEnd.Invoke(); //Invoked when timer runs out
             }
 
             if (!stopTimer)
