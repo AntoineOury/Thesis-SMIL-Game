@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: 02PostSO
   m_EditorClassIdentifier: 
   postImage: {fileID: 21300000, guid: 73a074a3d90d29546948c1b380760795, type: 3}
-  accountImage: {fileID: 21300000, guid: 1c68f5728468b7a47a94cddb32d22808, type: 3}
-  communityNote: 1234
+  accountImage: {fileID: 21300000, guid: 02a9e1ade01b7494c90b8a347e4afefa, type: 3}
+  communityNote01: comnote01
+  isFlagged01: 0
+  communityNote02: comnote02
+  isFlagged02: 1
+  communityNote03: comnote03
+  isFlagged03: 0

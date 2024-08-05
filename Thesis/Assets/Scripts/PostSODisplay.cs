@@ -15,7 +15,9 @@ public class PostSODisplay : MonoBehaviour
     public Image postImage;
     public Image accImage;
 
-    public TMP_Text communNote;
+    public TMP_Text communNote01;
+    public TMP_Text communNote02;
+    public TMP_Text communNote03;
 
 
     public Button scrollOn;
@@ -49,8 +51,27 @@ public class PostSODisplay : MonoBehaviour
         postImage.sprite = postSO.postImage;
         accImage.sprite = postSO.accountImage;
 
-        communNote.text = postSO.communityNote;
-        // communNote.text = postSO.communityNote.ToString();
+        communNote01.text = postSO.communityNote01;
+        communNote02.text = postSO.communityNote02;
+        communNote03.text = postSO.communityNote03;
+        
+    }
+    
+    public bool IsNoteFlagged(TMP_Text noteText)
+    {
+        if (noteText == communNote01)
+        {
+            return postSO[currentIndex].isFlagged01;
+        }
+        if (noteText == communNote02)
+        {
+            return postSO[currentIndex].isFlagged02;
+        }
+        if (noteText == communNote03)
+        {
+            return postSO[currentIndex].isFlagged03;
+        }
+        return false;
     }
     
 }
