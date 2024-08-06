@@ -25,13 +25,13 @@ public class PostSODisplay : MonoBehaviour
     public Button button3; // Button reference for communityNote03
 
     public Slider slider01; // Reference to the slider UI element
-    public Slider slider02;
     
     private int currentIndex = 0;
 
     public TimerBar timerBarSc; // Reference to the TimerBar Script
 
     private bool correctNoteClicked = false; // Flag to track if correct note was clicked
+    private bool incorrectNoteClicked = false; // Flag to track if incorrect note was clicked
 
     void Start()
     {
@@ -50,17 +50,23 @@ public class PostSODisplay : MonoBehaviour
         // Timer ending listener
         timerBarSc.onTimerEnd.AddListener(CycleThroughPosts);
     }
-
+    
     private void OnScrollButtonClick()
     {
-        if (!correctNoteClicked)
+        if (correctNoteClicked)
         {
-            // Update the slider value if the correct note wasn't clicked
+            // Increase the slider value if the correct note was clicked
+            slider01.value += 1; // Increase the slider value (or any other logic you need)
+        }
+        else if (incorrectNoteClicked)
+        {
+            // Decrease the slider value if the incorrect note was clicked
             slider01.value -= 1; // Decrease the slider value (or any other logic you need)
         }
-
-        // Reset the flag for the next post
+        
+        // Reset the flags for the next post
         correctNoteClicked = false;
+        incorrectNoteClicked = false;
 
         // Cycle through posts
         CycleThroughPosts();
@@ -105,6 +111,7 @@ public class PostSODisplay : MonoBehaviour
         if (isFlagged)
         {
             correctNoteClicked = true; // Set the flag to true if the correct note is clicked
+            incorrectNoteClicked = false; // Ensure incorrect note flag is reset
 
             Debug.Log("Button clicked and the note is flagged: " + note);
             // Perform additional actions for flagged note
@@ -113,6 +120,9 @@ public class PostSODisplay : MonoBehaviour
         }
         else
         {
+            incorrectNoteClicked = true; // Set the flag to true if the incorrect note is clicked
+            correctNoteClicked = false; // Ensure correct note flag is reset
+
             incorrectNote.enabled = true;
             correctNote.enabled = false;
             Debug.Log("Button clicked but the note is not flagged: " + note);
