@@ -17,7 +17,7 @@ MonoBehaviour:
   itIsFakeNews: 1
   communityNote01: comnote01
   isFlagged01: 0
-  communityNote02: Image is photoshoped/AI generated and is a political meme.
+  communityNote02: Image is photoshoped/AI generated and is political satire.
   isFlagged02: 1
-  communityNote03: This really happened, it's a repost from mainstream news.
+  communityNote03: This really happened, it's a post from a famous journalist.
   isFlagged03: 0
