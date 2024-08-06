@@ -2982,7 +2982,6 @@ GameObject:
   - component: {fileID: 1363601695}
   - component: {fileID: 1363601694}
   - component: {fileID: 1363601693}
-  - component: {fileID: 1363601696}
   m_Layer: 5
   m_Name: Scroll_Button
   m_TagString: Untagged
@@ -3164,18 +3163,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363601691}
   m_CullTransparentMesh: 1
---- !u!114 &1363601696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363601691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207a2c4dad68320428b1f10d07bf15d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1363773625
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,16 +53,36 @@ public class PostSODisplay : MonoBehaviour
     
     private void OnScrollButtonClick()
     {
-        if (correctNoteClicked)
+       
+        if (postSO[currentIndex].itIsFakeNews && correctNoteClicked)
         {
-            // Increase the slider value if the correct note was clicked
-            slider01.value += 1; // Increase the slider value (or any other logic you need)
-        }
-        else if (incorrectNoteClicked)
+            //post is fake news && the correct note is selected
+            slider01.value += 1;
+            
+        } else if (postSO[currentIndex].itIsFakeNews && incorrectNoteClicked)
         {
-            // Decrease the slider value if the incorrect note was clicked
-            slider01.value -= 1; // Decrease the slider value (or any other logic you need)
+            //post is fake news && incorrect note is selected
+            slider01.value -= 1;
+            
+        } else if (!postSO[currentIndex].itIsFakeNews && correctNoteClicked)
+        {
+            //post is NOT fake news && incorrect note is selected
+            slider01.value -= 1;
+            
+        }else if (!postSO[currentIndex].itIsFakeNews && incorrectNoteClicked)
+        {
+            //post is NOT fake news and incorrect note is selected
+            slider01.value -= 1;
+        }else if (!postSO[currentIndex].itIsFakeNews)
+        {
+            //post is NOT fake news
+            slider01.value += 1;
+        } else if (postSO[currentIndex].itIsFakeNews)
+        {
+            //post is fake news
+            slider01.value -= 1;
         }
+        
         
         // Reset the flags for the next post
         correctNoteClicked = false;
