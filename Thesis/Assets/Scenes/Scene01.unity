@@ -764,7 +764,6 @@ GameObject:
   - component: {fileID: 369552251}
   - component: {fileID: 369552250}
   - component: {fileID: 369552249}
-  - component: {fileID: 369552252}
   m_Layer: 5
   m_Name: ComNote_Button
   m_TagString: Untagged
@@ -874,42 +873,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 369552252}
-        m_TargetAssemblyTypeName: FlagCheckNotes, Assembly-CSharp
-        m_MethodName: CheckFlaggedText
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 680778199}
-          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 369552252}
-        m_TargetAssemblyTypeName: FlagCheckNotes, Assembly-CSharp
-        m_MethodName: CheckFlaggedText
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1504197350}
-          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 369552252}
-        m_TargetAssemblyTypeName: FlagCheckNotes, Assembly-CSharp
-        m_MethodName: CheckFlaggedText
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1607165296}
-          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &369552250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,19 +911,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369552247}
   m_CullTransparentMesh: 1
---- !u!114 &369552252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369552247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a7b2b00ac72f194fa84764e87be24ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  postSODisplay: {fileID: 989453152}
 --- !u!1 &403932061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,6 +2316,9 @@ MonoBehaviour:
   communNote02: {fileID: 1504197350}
   communNote03: {fileID: 1607165296}
   scrollOn: {fileID: 1363601693}
+  button1: {fileID: 1569503445}
+  button2: {fileID: 746004780}
+  button3: {fileID: 132007579}
   timerBarSc: {fileID: 1898716375}
 --- !u!1 &1016097600
 GameObject:
