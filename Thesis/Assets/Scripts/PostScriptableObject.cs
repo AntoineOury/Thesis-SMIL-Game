@@ -10,6 +10,8 @@ public class PostScriptableObject : ScriptableObject
     public Sprite postImage;
     public Sprite accountImage;
 
+    public bool itIsFakeNews;
+
     public string communityNote01;
     public bool isFlagged01;
     

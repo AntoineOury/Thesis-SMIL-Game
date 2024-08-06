@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postImage: {fileID: 21300000, guid: 631385d6904203245ae4c59689fd7155, type: 3}
   accountImage: {fileID: 21300000, guid: 1224442c8c8283d4f96711ce75072570, type: 3}
+  itIsFakeNews: 1
   communityNote01: another comnote01
   isFlagged01: 1
   communityNote02: another comnote02
