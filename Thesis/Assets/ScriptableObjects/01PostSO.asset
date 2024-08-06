@@ -15,9 +15,9 @@ MonoBehaviour:
   postImage: {fileID: 21300000, guid: 65b4fee1ab824c248aa45d470f1b3930, type: 3}
   accountImage: {fileID: 21300000, guid: 5fd3d14e7e934314ca9958e20965ed67, type: 3}
   itIsFakeNews: 0
-  communityNote01: element01
+  communityNote01: CNN has a lot of fake news, this is fake too.
   isFlagged01: 0
-  communityNote02: element02
+  communityNote02: It's not the real CNN account.
   isFlagged02: 0
-  communityNote03: element03
+  communityNote03: The image doesn't match the caption.
   isFlagged03: 0
