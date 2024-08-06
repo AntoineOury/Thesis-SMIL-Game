@@ -11,6 +11,9 @@ public class PostSODisplay : MonoBehaviour
     public Image postImage;
     public Image accImage;
 
+    public Image incorrectNote;
+    public Image correctNote;
+
     public TMP_Text communNote01;
     public TMP_Text communNote02;
     public TMP_Text communNote03;
@@ -83,9 +86,14 @@ public class PostSODisplay : MonoBehaviour
         {
             Debug.Log("Button clicked and the note is flagged: " + note);
             // Perform additional actions for flagged note
+            correctNote.enabled = true;
+            incorrectNote.enabled = false;
+
         }
         else
         {
+            incorrectNote.enabled = true;
+            correctNote.enabled = false;
             Debug.Log("Button clicked but the note is not flagged: " + note);
         }
     }
