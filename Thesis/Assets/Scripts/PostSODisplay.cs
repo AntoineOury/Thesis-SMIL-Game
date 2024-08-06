@@ -7,7 +7,7 @@ using TMPro;
 public class PostSODisplay : MonoBehaviour
 {
     public PostScriptableObject[] postSO;
-    
+
     public Image postImage;
     public Image accImage;
 
@@ -19,14 +19,19 @@ public class PostSODisplay : MonoBehaviour
     public TMP_Text communNote03;
 
     public Button scrollOn;
-    
+
     public Button button1; // Button reference for communityNote01
     public Button button2; // Button reference for communityNote02
     public Button button3; // Button reference for communityNote03
 
+    public Slider slider01; // Reference to the slider UI element
+    public Slider slider02;
+    
     private int currentIndex = 0;
 
     public TimerBar timerBarSc; // Reference to the TimerBar Script
+
+    private bool correctNoteClicked = false; // Flag to track if correct note was clicked
 
     void Start()
     {
@@ -39,11 +44,26 @@ public class PostSODisplay : MonoBehaviour
         button2.onClick.AddListener(() => OnButtonClick(button2.GetComponentInChildren<TMP_Text>().text));
         button3.onClick.AddListener(() => OnButtonClick(button3.GetComponentInChildren<TMP_Text>().text));
 
-        //Scroll Button listener
-        scrollOn.onClick.AddListener(CycleThroughPosts);
-        
+        // Scroll Button listener
+        scrollOn.onClick.AddListener(OnScrollButtonClick);
+
         // Timer ending listener
         timerBarSc.onTimerEnd.AddListener(CycleThroughPosts);
+    }
+
+    private void OnScrollButtonClick()
+    {
+        if (!correctNoteClicked)
+        {
+            // Update the slider value if the correct note wasn't clicked
+            slider01.value -= 1; // Decrease the slider value (or any other logic you need)
+        }
+
+        // Reset the flag for the next post
+        correctNoteClicked = false;
+
+        // Cycle through posts
+        CycleThroughPosts();
     }
 
     private void CycleThroughPosts()
@@ -84,11 +104,12 @@ public class PostSODisplay : MonoBehaviour
         bool isFlagged = IsNoteFlagged(note);
         if (isFlagged)
         {
+            correctNoteClicked = true; // Set the flag to true if the correct note is clicked
+
             Debug.Log("Button clicked and the note is flagged: " + note);
             // Perform additional actions for flagged note
             correctNote.enabled = true;
             incorrectNote.enabled = false;
-
         }
         else
         {
