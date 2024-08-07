@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b887aca837f47c4d8eadd8a0c7572e9, type: 3}
-  m_Name: 04PostSO
+  m_Name: 07PostSO
   m_EditorClassIdentifier: 
-  postImage: {fileID: 21300000, guid: 9c4c3b5634129834bbd7c31bcb608a54, type: 3}
-  accountImage: {fileID: 21300000, guid: f29f6c454fd07c84d890e4e1de7410fd, type: 3}
+  postImage: {fileID: 21300000, guid: 010dfd19207956f46b5208c6c52ef36d, type: 3}
+  accountImage: {fileID: 21300000, guid: 724ef493d778b9f4e91ac42907a290e1, type: 3}
   itIsFakeNews: 1
-  communityNote01: Account is reliable because of the blue checkmark
+  communityNote01: Minnesota got sold by the left to Somalia.
   isFlagged01: 0
-  communityNote02: There is no record of her saying that statement.
+  communityNote02: Minnessota is not being turned into Somalia, any flag similarities
+    are coincidental.
   isFlagged02: 1
-  communityNote03: Quote is legitimate, the image with it is not.
+  communityNote03: Blue checkmark legitimizes this post.
   isFlagged03: 0

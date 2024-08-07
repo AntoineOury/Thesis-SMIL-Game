@@ -15,9 +15,9 @@ MonoBehaviour:
   postImage: {fileID: 21300000, guid: 73a074a3d90d29546948c1b380760795, type: 3}
   accountImage: {fileID: 21300000, guid: 02a9e1ade01b7494c90b8a347e4afefa, type: 3}
   itIsFakeNews: 1
-  communityNote01: comnote01
+  communityNote01: This account has a blue checkmark it can be trusted.
   isFlagged01: 0
   communityNote02: Image is photoshoped/AI generated and is political satire.
   isFlagged02: 1
-  communityNote03: This really happened, it's a post from a famous journalist.
+  communityNote03: This really happened, it's a post from a journalist.
   isFlagged03: 0

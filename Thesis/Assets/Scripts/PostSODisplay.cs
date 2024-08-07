@@ -72,9 +72,10 @@ public class PostSODisplay : MonoBehaviour
             
         } else if (!postSO[currentIndex].itIsFakeNews && correctNoteClicked)
         {
-            //post is NOT fake news && incorrect note is selected
-            slider01.value -= 1;
-            
+            //post is NOT fake news && correct note is selected
+            slider01.value += 1;
+            totalScore += 1;
+
         }else if (!postSO[currentIndex].itIsFakeNews && incorrectNoteClicked)
         {
             //post is NOT fake news and incorrect note is selected

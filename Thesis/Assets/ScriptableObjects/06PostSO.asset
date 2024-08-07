@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b887aca837f47c4d8eadd8a0c7572e9, type: 3}
-  m_Name: 03PostSO
+  m_Name: 06PostSO
   m_EditorClassIdentifier: 
-  postImage: {fileID: 21300000, guid: 631385d6904203245ae4c59689fd7155, type: 3}
-  accountImage: {fileID: 21300000, guid: 1224442c8c8283d4f96711ce75072570, type: 3}
+  postImage: {fileID: 21300000, guid: 614301ffbf3e1c64d9ad38c32ca80ecb, type: 3}
+  accountImage: {fileID: 21300000, guid: 3ba554dab81a43c47b2fdc287d8c74d6, type: 3}
   itIsFakeNews: 1
-  communityNote01: Data is outdated or innacurate, needs double checking.
+  communityNote01: The image is AI generated/ photoshopped.
   isFlagged01: 1
-  communityNote02: This source is reliable and unbiased.
+  communityNote02: The caption is detailed adding credibility.
   isFlagged02: 0
-  communityNote03: Account doesn't have a blue checkmark so I can't trust it.
+  communityNote03: Caption is backed by the image, making the post credible news.
   isFlagged03: 0

@@ -1241,7 +1241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &566475238
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1290,8 +1290,8 @@ RectTransform:
   m_GameObject: {fileID: 658630887}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1327751131}
   m_Father: {fileID: 1077822402}
@@ -1354,7 +1354,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenu
+          m_StringArgument: Scene01
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &658630890
@@ -2127,14 +2127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postSO:
-  - {fileID: 11400000, guid: 106bfbb9e1fe90d49be8adfec3c1f67c, type: 2}
-  - {fileID: 11400000, guid: 5a46c89a171f5b64998d2f85f6bf9ece, type: 2}
-  - {fileID: 11400000, guid: 78d12616b604f04489827151e9883207, type: 2}
-  - {fileID: 11400000, guid: dee5e1a7a8e97654a85f174334193cef, type: 2}
-  - {fileID: 11400000, guid: 69b3b98fa70dbf746a0b99da402dafb8, type: 2}
-  - {fileID: 11400000, guid: e2442a03fe877eb4ca4d3637e16af12d, type: 2}
-  - {fileID: 11400000, guid: a7bdaa03ede95f14db9d5e2d4631ba37, type: 2}
-  - {fileID: 11400000, guid: 481d02cd333c6244d8fb4a48beb59f95, type: 2}
+  - {fileID: 11400000, guid: 1f756d5a764b6b745b1d14ba52b5f19a, type: 2}
+  - {fileID: 11400000, guid: 67c5788a16e5f0e4fbf19cda7202c041, type: 2}
   postImage: {fileID: 1092772480}
   accImage: {fileID: 799710807}
   incorrectNote: {fileID: 759210398}
@@ -2572,7 +2566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3347e5a614791e4597687f54ec81ee2, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2722,7 +2716,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Try Again?
+  m_text: Play the game?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3823b1659d3b054b9c070f131000549, type: 2}
   m_sharedMaterial: {fileID: 72343434634377942, guid: d3823b1659d3b054b9c070f131000549, type: 2}
@@ -2749,7 +2743,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47
+  m_fontSize: 33.55
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4181,7 +4175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1795260346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4330,7 +4324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -228}
+  m_AnchoredPosition: {x: -1, y: -228}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823957527
@@ -4353,7 +4347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You finished the game!
+  m_text: You finished the tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3823b1659d3b054b9c070f131000549, type: 2}
   m_sharedMaterial: {fileID: 72343434634377942, guid: d3823b1659d3b054b9c070f131000549, type: 2}
@@ -4854,7 +4848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -432}
+  m_AnchoredPosition: {x: 35, y: -432}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2004009996
