@@ -30,8 +30,13 @@ public class PostSODisplay : MonoBehaviour
 
     public TimerBar timerBarSc; // Reference to the TimerBar Script
 
+    public GameObject endScreen;
+    public TMP_Text scoreText;
+
     private bool correctNoteClicked = false; // Flag to track if correct note was clicked
     private bool incorrectNoteClicked = false; // Flag to track if incorrect note was clicked
+    
+    private int totalScore = 0; // tracks the gained points of player
 
     void Start()
     {
@@ -58,7 +63,8 @@ public class PostSODisplay : MonoBehaviour
         {
             //post is fake news && the correct note is selected
             slider01.value += 1;
-            
+            totalScore += 1;
+
         } else if (postSO[currentIndex].itIsFakeNews && incorrectNoteClicked)
         {
             //post is fake news && incorrect note is selected
@@ -77,6 +83,8 @@ public class PostSODisplay : MonoBehaviour
         {
             //post is NOT fake news
             slider01.value += 1;
+            totalScore += 1;
+            
         } else if (postSO[currentIndex].itIsFakeNews)
         {
             //post is fake news
@@ -94,12 +102,17 @@ public class PostSODisplay : MonoBehaviour
 
     private void CycleThroughPosts()
     {
+        int previousIndex = currentIndex;
         currentIndex = (currentIndex + 1) % postSO.Length;
         DisplayPost(postSO[currentIndex]);
         timerBarSc.RestartTimer(); // Restart the timer coroutine
-        
-    }
 
+        if (currentIndex == 0 && previousIndex == postSO.Length - 1)
+        {
+            // Something happens when the end of the array is reached
+            OnAllPostsCycledThrough();
+        }
+    }
     private void DisplayPost(PostScriptableObject postSO)
     {
         postImage.sprite = postSO.postImage;
@@ -148,5 +161,18 @@ public class PostSODisplay : MonoBehaviour
             correctNote.enabled = false;
             Debug.Log("Button clicked but the note is not flagged: " + note);
         }
+    }
+    
+    
+    private void OnAllPostsCycledThrough()
+    {
+        // Perform specific action when all posts have been cycled through
+
+       endScreen.SetActive(true);
+
+       scoreText.text = totalScore.ToString();
+        
+        Debug.Log("All posts have been cycled through.");
+        // You can add any specific action you want here, such as displaying a message or triggering an event.
     }
 }
