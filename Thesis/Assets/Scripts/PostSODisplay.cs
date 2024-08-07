@@ -97,6 +97,7 @@ public class PostSODisplay : MonoBehaviour
         currentIndex = (currentIndex + 1) % postSO.Length;
         DisplayPost(postSO[currentIndex]);
         timerBarSc.RestartTimer(); // Restart the timer coroutine
+        
     }
 
     private void DisplayPost(PostScriptableObject postSO)
